@@ -10,36 +10,36 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
-  margin: 1em;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  margin: 1em;
+  gap: 1em;
 }
 .header {
-  min-height: 100px;
+  height: 100px;
   background-color: blue;
   flex-basis: 100%;
 }
 .main {
-  min-width: 500px;
+  min-height: calc(100vh - 200px);
   background-color: green;
   order: 1;
-  flex-basis: 70%;
+  flex-basis: calc(100% - 500px - 2em);
 }
 .left {
+  min-height: calc(100vh - 200px);
   background-color: red;
-  flex-grow: 1;
+  flex-basis: 300px;
 }
 .right {
+  min-height: calc(100vh - 200px);
   background-color: magenta;
   order: 2;
-  flex-grow: 1;
+  flex-basis: 200px;
 }
 .footer {
-  min-height: 100px;
+  height: 100px;
   flex-basis: 100%;
   background-color: yellow;
   order: 3;
@@ -47,10 +47,9 @@ html {
 }
 .card-item {
   display: inline-block;
-  border: 2px solid yellow;
   padding: 20px;
-  width: calc(33.33% - 2em);
-  margin: 1em;
+  flex-grow: 1;
+  flex-basis: calc(33.33% - 1em);
 }
 .card-item-title {
   display: block;
